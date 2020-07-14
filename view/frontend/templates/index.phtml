@@ -1,0 +1,68 @@
+<h1>Booking page</h1>
+
+<form action="<?php echo $block->getFormAction() ?>" method="post" data-mage-init='{"validation":{}}'>
+    <fieldset class="fieldset">
+        <div class="field name required">
+            <label class="label" for="firstname"><span>Fist name</span></label>
+            <div class="control">
+                <input  name="firstname" id="firstname" type="text" class="input-text required">
+            </div>
+        </div>
+        <div class="field name required">
+            <label class="label" for="lastname"><span>Last name</span></label>
+            <div class="control">
+                <input  name="lastname" id="lastname" type="text" class="input-text" data-validate='{"custom-required":true}'>
+            </div>
+        </div>
+        <div class="field name required">
+            <label class="label" for="phone"><span>Phone</span></label>
+            <div class="control">
+                <input  name="phone" id="phone" type="text" class="input-text required" data-validate='{"telephone-check-maximum-length-15":true,"telephone-check-minimum-length-9":true, "validate-digits":true}'>
+            </div>
+        </div>
+        <div class="field name required">
+            <label class="label" for="bookingTime"><span>Booking time</span></label>
+            <div class="bookingTime">
+                <input  name="booking_time" id="booking_time" type="date" class="input-text required">
+            </div>
+        </div>
+    </fieldset>
+    <div class="actions-toolbar">
+        <div class="primary">
+            <input type="hidden" name="hideit" id="hideit" value=""/>
+            <button type="submit" title="Submit" class="action submit primary">
+                <span>Send booking informations</span>
+            </button>
+        </div>
+    </div>
+
+
+</form>
+
+<script type="text/javascript">
+    require([
+        'jquery', // jquery Library
+        'jquery/ui', // Jquery UI Library
+        'jquery/validate', // Jquery Validation Library
+        'mage/translate' // Magento text translate (Validation message translte as per language)
+    ], function($){
+        $.validator.addMethod(
+            'telephone-check-maximum-length-15', function (value) {
+                return (value.length<15); // Validation logic here
+            },
+            $.mage.__('Please enter less or equal than 15 digits.')
+        );
+        $.validator.addMethod(
+            'telephone-check-minimum-length-9', function (value) {
+                return (value.length>=9); // Validation logic here
+            },
+            $.mage.__('Please enter greater or equal than 9 digits.')
+        );
+        $.validator.addMethod(
+            'custom-required', function (value) {
+                return (value.length>0); // Validation logic here
+            },
+            $.mage.__('This is custom require field')
+        );
+    });
+</script>
