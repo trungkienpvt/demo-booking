@@ -8,8 +8,17 @@
     "AFL-3.0"
   ],
   "require": {
-    "php": ">=7.1.0"
+    "php": ">=7.1.0",
+    "trungkienpvt/demo_booking": "2.0.0"
   },
+  "authors": [
+    {
+      "name": "Trung Kien",
+      "email": "phantrungkienvt@gmail.com",
+      "homepage": "https://hellodev.dev",
+      "role": "Senior PHP"
+    }
+  ],
   "autoload": {
     "files": [
       "registration.php"
