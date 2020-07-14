@@ -15,7 +15,7 @@
       "registration.php"
     ],
     "psr-4": {
-      "Demo\\": "src/Booking"
+      "Demo\\": "src/Demo"
     }
   }
 }
