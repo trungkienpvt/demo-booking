@@ -10,6 +10,14 @@
   "require": {
     "php": ">=7.1.0"
   },
+  "keywords": [
+    "Example booking",
+    "Custom booking",
+    "Magento 2",
+    "Booking module",
+    "Example module"
+
+  ],
   "authors": [
     {
       "name": "Trung Kien",
