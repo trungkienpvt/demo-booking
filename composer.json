@@ -8,8 +8,7 @@
     "AFL-3.0"
   ],
   "require": {
-    "php": ">=7.1.0",
-    "trungkienpvt/demo_booking": "2.0.0"
+    "php": ">=7.1.0"
   },
   "authors": [
     {
