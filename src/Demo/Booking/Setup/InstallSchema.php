@@ -1,13 +1,16 @@
 <?php
+
 namespace Demo\Booking\Setup;
+
 use Magento\Framework\Setup\InstallSchemaInterface;
 use Magento\Framework\Setup\ModuleContextInterface;
 use Magento\Framework\Setup\SchemaSetupInterface;
+
 class InstallSchema implements InstallSchemaInterface
 {
 
     public function install(
-        \Magento\Framework\Setup\SchemaSetupInterface $setup, 
+        \Magento\Framework\Setup\SchemaSetupInterface $setup,
         \Magento\Framework\Setup\ModuleContextInterface $context
     )
     {
@@ -25,7 +28,7 @@ class InstallSchema implements InstallSchemaInterface
                     [
                         'identity' => true,
                         'nullable' => false,
-                        'primary'  => true,
+                        'primary' => true,
                         'unsigned' => true,
                     ],
                     'ID'
